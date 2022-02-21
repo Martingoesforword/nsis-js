@@ -1,0 +1,55 @@
+var NSIConfig = {
+    compressor: "lama",
+    executionLevel: "admin",
+    reserveFiles: [],
+    definedStringVars:{},
+    MUIConfig: {
+        LANGUAGE: "SimpChinese"
+    },
+    OutFile: "Setup.exe",
+    Name: "${PRODUCT_NAME} ${PRODUCT_VERSION}",
+}
+
+var Dialog;
+NSIConfig.compressor = "lama";
+NSIConfig.executionLevel = "admin";
+NSIConfig.definedStringVars = {
+    PRODUCT_NAME : "SOUI NSIS插件演示",
+    PRODUCT_VERSION : "1.0",
+    PRODUCT_PUBLISHER : "setoutsoft",
+    PRODUCT_WEB_SITE : "http://www.ui520.cn",
+    PRODUCT_MAIN_EXE : "demo.exe",
+    // 图标
+    MUI_ICON : ".\file\logo.ico",
+    //卸载图标
+    MUI_UNICON : ".\file\logo.ico",
+    //英文产品名称
+    PRODUCT_NAME_EN: "soui-nsis: demo",
+    //提示语
+    ERROR_MESSAGE : "安装包不正确，请重新下载",
+    //预计软件所需空间大小(M)，注册表中为真实大小，仅用于判断空间是否够用。
+    REQUIRED_SPACE : "15",
+    //定义互斥名称
+    MyMutex_Install : "MyMutex_Install",
+    MyMutex_UnInstall : "MyMutex_UnInstall"
+}
+NSIConfig.reserveFiles.push("${NSISDIR}\\Plugins\\setupdll.dll");
+
+
+import (MUI.nsh)
+import (WinCore.nsh)
+import (nsWindows.nsh)
+import (nsDialogs.nsh)
+import (FileFunc.nsh)
+import (LogicLib.nsh)
+import (WinMessages.nsh)
+import (MUI2.nsh)
+import (WordFunc.nsh)
+import (Library.nsh)
+
+NSIConfig.
+
+MUIConfig.LANGUAGE = "SimpChinese"
+
+
+

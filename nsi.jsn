@@ -1,0 +1,45 @@
+
+var resultNSI;
+
+function appendNSI(code) {
+    resultNSI += code + "\n";
+}
+
+function defineVar(name) {
+    appendNSI("Var"+ CONST.GAP+ name);
+    return {
+        type: 1,
+        id: name
+    }
+}
+
+var CONST = {
+    GAP: " "
+}
+
+var CompressorTypes = {
+    LZMA: "lzma"
+}
+
+//设定压缩工具
+function setCompressor(typeName) {
+    if(CompressorTypes[typeName]) {
+        appendNSI("SetCompressor"+ CONST.GAP+ CompressorTypes[typeName]);
+    }
+}
+
+var ExecutionLevels = {
+    ADMIN : "admin"
+}
+
+//设定安装包执行需要的特权等级
+function setExecutionLevel(levelName) {
+    if(ExecutionLevels[levelName]) {
+        appendNSI("RequestExecutionLevel"+ CONST.GAP+ ExecutionLevels[levelName]);
+    }
+}
+
+
+var NSIConfig = {
+
+}

@@ -1,0 +1,6 @@
+//nsi构建程序所在目录
+var NSISDIR;
+
+var NSIConfig = {};
+
+var MUIConfig = {};
